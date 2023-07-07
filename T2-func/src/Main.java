@@ -45,7 +45,7 @@ class Data{
     }
 }
 
-public class App {
+class Main {
     public static void main(String[] args) throws Exception {
         try (Stream <String> lines = Files.lines(Paths.get("dados.csv"), Charset.defaultCharset())) {
             List<String[]> splitedLines = lines.map(e -> e.split(","))
@@ -61,7 +61,6 @@ public class App {
              // Leitura da linha de entrada contendo os 5 inteiros
             Scanner scanner = new Scanner(System.in);
 
-            System.out.println("Digite 4 valores separados por espaço:");
             String input = scanner.nextLine();
             String[] inputValues = input.split(" ");
 
